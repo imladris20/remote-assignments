@@ -6,17 +6,38 @@ body {
     /* font-family: 'Cookie', cursive; */
     font-family: 'Noto Sans TC', 'Fira Sans',sans-serif;
     line-height: 1.5rem;
-    color: #3a3a3a;
+    color: #fcfcfc;
     margin: 0;
+    background: url("../img/background.jpg") top center / cover grey;
+    background-blend-mode: darken;
 }
 
-/* ul {
+.main-title {
+    font-family: 'Cookie', cursive;
+    font-size: 5em;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+.logo {
+    height: 5vh;
+}
+
 p {
     font-size: 1em;
-    margin: 0 0 1em 0;
-} */
+    margin-bottom: 1em;
+    hyphens: auto;
+}
+
+h2, h3 {
+    margin-bottom: 1em;
+}
