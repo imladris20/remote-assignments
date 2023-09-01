@@ -1,70 +1,214 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    /* font-family: 'Cookie', cursive; */
-    font-family: 'Noto Sans TC', 'Fira Sans',sans-serif;
-    line-height: 1.5rem;
-    color: #fcfcfc;
-    margin: 0;
-    background: url("../img/background.jpg") top center / cover grey;
-    background-blend-mode: darken;
+	font-family: 'Noto Sans TC', 'Fira Sans',sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+	/* background: url("../img/background.jpg") top center / cover grey; */
+    /* background-blend-mode: darken; */
+	display: flex;
+  	flex-direction: column;
+  	min-height: 100vh;
 }
 
-.main-title a {
-    font-family: 'Cookie', cursive;
-    font-size: 1.25em;
-    margin: 0;
-    display: inline-block;
-    padding: 10px 15px;
-    text-align: center;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.logo {
-    height: 5vh;
+nav, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 p {
-    font-size: 1em;
-    margin-bottom: 1em;
-    hyphens: auto;
+	font-size: .95em;
+	margin: 0 0 1em 0;
+	text-align: center;
+}
+
+h2, h3, a {
+	color: #093a58;
+	text-align: center;
 }
 
 h2, h3 {
-    margin-bottom: 1em;
+	margin: 0 0 .8em 0;
 }
 
-/* ---- Layout Containers ---- */
+a {
+	text-decoration: none;
+}
 
-header {
-    background-color: aqua;
-    padding: 0.5em 1em 0.5em 1em;
+img {
+	height: 4vh;
+}
+
+span {
+	display: block;
+	margin-top: 20px;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.h-items {
+	flex: 1;
+}
+
+.main-title {
+	font-family: 'Cookie', cursive;
+	font-size: clamp(25px, 5.5vh, 45px);
+	margin: 0;
+	flex-grow: 2;
+	/* text-align: center; */
+	/* padding: 10px 15px; */
+}
+
+.menu {
+	min-height: 18px;
+}
+
+.main-title a {
+	text-align: center;
+	padding: 10px 15px;
+
+}
+
+.main-logo {
+	padding: 10px 10px;
+}
+
+.main-nav {
+	display: none;
+}
+
+.main-nav-ul {
+	margin-top: 5px;
+	display: none;
+}
+
+.main-nav-ul a {
+	text-align: center;
+	/* display: block; */
+	padding: 10px 15px;
+	font-size: .95em;
+	color: #3acec2;
+	display: none;
+}
+
+.main-nav-ul a:hover {
+	color: #093a58;
+}
+
+.top-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:flex-end;
+}
+
+.message, .footer {
+	text-align: center;
 }
 
 .message {
-    padding: 3.2em 1em;
-    margin-bottom: 0;
-    background-color: #FCC89B;
+	color: #fff;
+	background: #3acec2;
+	padding: 3.2em 0;
 }
 
 .row {
-    padding: 1em;
-    background-color: #FF5FA2;
+	margin-top: 15px;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	justify-content: center;
 }
 
-footer {
-    padding: 1em;
-    background-color: goldenrod;
+
+.content {
+	padding: 1em;
+	background: #edf4f7;
+	border-radius: .35em;
+	margin: 0 .5em .8em;
+	justify-content: center;
 }
+
+h3 {
+	align-items: center;
+}
+
+.content .button {
+	display: block;
+	width: 8em;
+	margin: 0px auto; /* 上下外邊距為10px，左右外邊距自動調整，實現水平置中 */
+  }
+
+.footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+}
+
+/* ---- Page Elements ---- */
+
+.welcome-message {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+/* .feat-img {
+	border-radius: 5px;
+} */
+
+.button {
+	color: #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: #3acec2;
+	border-radius: .35em;
+}
+
+
+/* flexbox */
+
+.h-items {
+	flex: 1;
+}
+
+.main-title{
+	flex-grow: 2;
+}
+
+a.main-logo {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+  
+
+/* ================================= 
+  Media Queries
+==================================== */
+/* 
+@media (min-width: 769px) {
+	.main-header,
+	.row {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.tagline {
+		font-size: 1.4em;
+	}
+}
+@media (min-width: 1025px) {
+	.main-header,
+	.row {
+		width: 80%;
+		max-width: 1150px;
+	}
+} */

@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Cookie', cursive; */
+    font-family: 'Noto Sans TC', 'Fira Sans',sans-serif;
+    line-height: 1.5rem;
+    color: #fcfcfc;
+    margin: 0;
+    background: url("../img/background.jpg") top center / cover grey;
+    background-blend-mode: darken;
+    text-align: center;
+}
+
+.main-title {
+    padding: 10px;
+}
+
+.main-title a {
+    font-family: 'Cookie', cursive;
+    font-size: 1.25em;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-title, .logo, .menu {
+    height: 6vh;
+    margin: 0.5em;
+    border: 2px solid black;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    hyphens: auto;
+}
+
+h2, h3 {
+    margin-bottom: 1em;
+}
+
+/* ---- Layout Containers ---- */
+
+header {
+    background-color: aqua;
+    padding: 0.5em 1em 0.5em 1em;
+    border: 2px solid black;
+}
+
+.message {
+    padding: 3.2em 1em;
+    margin-bottom: 0;
+    border: 2px solid black;
+    background-color: #FCC89B;
+}
+
+.row {
+    padding: 1em;
+    border: 2px solid black;
+    background-color: #FF5FA2;
+}
+
+footer {
+    padding: 1em;
+    border: 2px solid black;
+    background-color: goldenrod;
+}
+
+ul,h2, h3, p, .welcome-message, .content {
+    border: 2px solid black;
+    padding: 1em;
+}
+
+.content {
+    margin-bottom: 2em;
+}
+
+li {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.main-nav-ul {
+    display: none;
+}
+
+/* flexbox setting*/
+
+.top-header {
+    display: flex;
+    padding-top: 5px;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: auto;
+}
+
