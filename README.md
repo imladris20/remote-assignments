@@ -14,6 +14,7 @@ required.
 ---
 
 ### Assignment 2: RWD Page Layout in pure HTML/CSS
+Deployed Website: https://caringtaiwan.netlify.app/
 
 Apply any HTML, CSS techniques without Bootstrap, jQuery or other libraries to accomplish
 following RWD page layout requests.
