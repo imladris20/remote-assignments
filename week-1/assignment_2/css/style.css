@@ -131,6 +131,7 @@ span {
 	flex-wrap: wrap;
 	flex-grow: 1;
 	justify-content:space-around;
+	flex-direction:column;
 }
 
 
@@ -187,6 +188,7 @@ h3 {
 		width: 85%;
 		margin: 0 auto;
 		max-width: 1200px;
+		flex-direction: row;
 	}
 
 	.content {
