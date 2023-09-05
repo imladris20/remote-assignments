@@ -7,8 +7,8 @@ Follow this tutorial to host your own website on GitHub Pages and take steps bel
 in your assignments:
 1. Create a new public repository named remote-assignments in your GitHub account.
 2. Create folders in this repository for each week. For example: folder week-1 is for all
-the files you'd like to submit in week 1. You may create arbitrary subfolders if
-required.
+the files you'd like to submit in week 1. You may create arbitrary subfolders if required.
+
 3. Please manage and submit your work to GitHub by Git CLI.
 
 ---
@@ -38,7 +38,10 @@ Key Point:
 1. Menu Items in the navigator should be replaced by a menu trigger icon.
 
 #### Request 4: Layout when screen width < 500px
-Key Point:
+Key Point:Assignment 1: Function and Array
+Complete the function below to find the max number of the passing array of numbers.
+
+Reminder: you can't use built-in Math.max() or sort() to complete this assignment.
 1. Content Boxes should change from 2-columns to 1-column layout.
 
 ---
@@ -57,3 +60,54 @@ what you can really stand out from others.
 ---
 
 ## Week-2
+
+### Assignment 1: Function and Array
+
+Complete the function below to find the max number of the passing array of numbers.
+
+Reminder: you can't use built-in Math.max() or sort() to complete this assignment.
+
+---
+
+### Assignment 2: Function and Object
+Complete the function below to calculate the result of the passing object.
+
+---
+
+### Assignment 3: Function, Array, and Object
+Complete the function below to calculate the total price of all products after applying a
+discount.
+
+---
+
+### Assignment 4: HTML DOM and Event Handling
+Following assignment in week 1, let’s add some effects on it by only pure JavaScript without
+Bootstrap, jQuery or any other libraries.
+
+#### Request 1: Click to Change Text.
+When the user clicks on the "Welcome Message" block, change text to "Have a Good
+Time!".
+
+#### Request 2: Click to Show/Close Menu.
+When the user clicks the menu at the top-right corner, show the hidden mobile menu. After
+that, the user can click the close button to hide it.
+
+Hint: you may apply css position:fixed to create a floating mobile menu, which may be out of
+screen at the beginning and totally separated from the original menu.
+
+#### Request 3: Click to Show More Content Boxes.
+There are some more content boxes waiting to show. When the user clicks the Call-to-Action
+button, show those hidden content boxes.
+
+Hint: all content boxes are already there, they are just set to display:none at the beginning.
+
+---
+
+#### Assignment 5: Algorithm (Advanced Optional)
+Given an array of integers, return indices of the two numbers such that they add up to a
+specific target. You may assume that each input would have exactly one solution, and you
+may not use the same element twice.
+
+---
+
+## week-3
