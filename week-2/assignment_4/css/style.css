@@ -190,7 +190,13 @@ h3 {
 
 .main-nav-float-ul {
 	min-height: 100vh;
+	border: 2px solid #E6D275;
+	border-radius: var(--borderRadius-large, 0.35rem);
+  	border-bottom-right-radius: 0;
+  	border-top-right-radius: 0;
+	box-shadow: -2px 0px 5px grey;
 	width: 30vw;
+	max-width: 250px;
 	background-color: #816f5f;
 	position: fixed;
 	top:0;
