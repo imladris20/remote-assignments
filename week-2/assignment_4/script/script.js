@@ -4,9 +4,14 @@
 
 const welcomeBlock = document.querySelector('.message');
 const welcomeMessage = document.querySelector('.welcome-message');
+let isChanged =false;
 
 welcomeBlock.addEventListener('click', () => {
-    welcomeMessage.textContent = "一起面對這座島嶼的創傷";
+    if (!isChanged) {
+        welcomeMessage.textContent = "一起面對這座島嶼的創傷";
+    } else {
+        welcomeMessage.textContent = "我們的家園怎麼了？";
+    }
 });
 
 
