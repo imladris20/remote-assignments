@@ -84,6 +84,8 @@ discount.
 Following assignment in week 1, let’s add some effects on it by only pure JavaScript without
 Bootstrap, jQuery or any other libraries.
 
+Deployed Website: https://imladris20.github.io/remote-assignments/week-2/assignment_4/
+
 #### Request 1: Click to Change Text.
 When the user clicks on the "Welcome Message" block, change text to "Have a Good
 Time!".
