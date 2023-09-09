@@ -190,7 +190,7 @@ h3 {
 
 .main-nav-float-ul {
 	min-height: 100vh;
-	border: 2px solid #E6D275;
+	border: 1px solid #E6D275;
 	border-radius: var(--borderRadius-large, 0.35rem);
   	border-bottom-right-radius: 0;
   	border-top-right-radius: 0;
@@ -221,7 +221,7 @@ h3 {
 }
 
 .close-logo img {
-	height: 1.8vh;
+	height: 1.6vh;
 }
 
 .hide {
