@@ -218,6 +218,33 @@ h3 {
 	height: 1.8vh;
 }
 
+.hide {
+	display: none;
+}
+
+.more-content {
+	margin-top: 15px;
+	margin-bottom: 25px;
+	background: none;
+	text-align: center;
+}
+
+.more-content .button {
+	margin: 0 auto;
+	background: none;
+	color: #e6d275;
+	white-space: pre;
+}
+
+.arrow {
+	height: 12px;
+	transition: all 0.15s ease-out 0s;
+}
+
+.more-content:hover .arrow {
+	transform: translateX(5px);
+}
+
 /* ================================= 
   Media Queries
 ==================================== */
@@ -242,6 +269,23 @@ h3 {
 	.content .button {
 		margin-top: auto;
 		align-self: flex-end;
+	}
+
+	.more-content {
+		flex-basis: 100%;
+		margin-top: 15px;
+		margin-bottom: 25px;
+		background: none;
+		text-align: center;
+	}
+
+	.more-content .button {
+		margin: 0 auto;
+		background: none;
+	}
+
+	.hide {
+		display: none;
 	}
 
 	h2 {
