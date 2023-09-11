@@ -11,7 +11,7 @@ const calculate = (data) => {
         originTotal += currentValue.price;
     } )
 
-    return originTotal*data.discount;
+    return originTotal*(1-data.discount);
 
 }
 const discountedPrice = calculate({
