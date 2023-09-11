@@ -11,12 +11,12 @@ may not use the same element twice.
 function twoSum(nums, target) {
 
     const numMap = {};
-    let indices = []
-    let found = false;
+    let indices = []    //  應該用const，array跟object只是不能重新賦值
+    let found = false;  //  這邊用let應該是對的？
 
     nums.forEach( (value, index) => {
 
-        let complement = target - value;
+        let complement = target - value;    //  這邊用let應該也是對的？
         
         if (found){
             return;

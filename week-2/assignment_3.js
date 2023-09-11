@@ -5,7 +5,7 @@ discount.
 
 const calculate = (data) => {
 
-    let originTotal = 0;
+    let originTotal = 0;    /* 這個如果用const 就會沒辦法更動數值，對吧 */
 
     data.products.forEach( currentValue => {
         originTotal += currentValue.price;
@@ -36,7 +36,7 @@ console.log(discountedPrice); // show the total price of all products after appl
 /* 另外練習用array.reduce 的第二種解法
 
 const calculate = (data) => {
-    let prices = [];
+    let prices = [];    // 這個如果用const的話，應該還是可以push對吧？
 
     data.products.forEach( currentValue => {
         prices.push(currentValue.price);

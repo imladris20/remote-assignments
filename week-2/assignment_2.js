@@ -3,7 +3,7 @@ Complete the function below to calculate the result of the passing object.
 */
 
 const calculate = (args) => {
-    let {n1, n2, op} = args;
+    let {n1, n2, op} = args;        /* 應改成用const */
 
     switch(op) {
         case "+":
