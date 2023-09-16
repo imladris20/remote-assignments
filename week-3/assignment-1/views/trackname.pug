@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block main
+    h1 Summation of Arithmetic Series
+    h2 Give me your name!
+    form(action='/trackName' method='post')
+        label
+            | Please insert your name: 
+            input(style='margin-left: 10px' type='text' name='username')
+        button(style='margin-left: 2px' type='submit') Submit

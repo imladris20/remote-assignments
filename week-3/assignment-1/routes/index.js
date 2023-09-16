@@ -3,6 +3,23 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     res.redirect('/sum.html');
+});
+
+router.get('/myName', (req,res) => {
+
+    const {username} = req.cookies;
+    console.log('nameoutput: ', username)
+    // const username = 'polien';
+
+    if (!username) {
+        res.redirect('/trackName');
+    } else {
+        res.render('username.pug', {username});
+    }    
+});
+
+router.get('/trackName', (req,res) => {
+    res.render('trackname.pug')
 })
 
 router.get('/getData', (req,res) => {
@@ -40,6 +57,11 @@ router.get('/getData', (req,res) => {
 router.post('/sum.html', (req, res) => {
     res.cookie('numberInsert', req.body.targetnumber);
     res.redirect(`/getData?number=${req.body.targetnumber}`);
+})
+
+router.post('/trackName', (req, res) => {
+    res.cookie('username', req.body.username);
+    res.redirect('/myName');
 })
 
 module.exports = router;
