@@ -19,7 +19,12 @@ router.get('/myName', (req,res) => {
 });
 
 router.get('/trackName', (req,res) => {
-    res.render('trackname.pug')
+    const {username} = req.cookies;
+    if (username){
+        res.redirect('/myName')
+    } else {
+        res.render('trackname.pug')
+    }
 })
 
 router.get('/getData', (req,res) => {
@@ -62,6 +67,11 @@ router.post('/sum.html', (req, res) => {
 router.post('/trackName', (req, res) => {
     res.cookie('username', req.body.username);
     res.redirect('/myName');
+})
+
+router.post('/clear', (req, res) => {
+    res.clearCookie('username');
+    res.redirect('/trackName');
 })
 
 module.exports = router;

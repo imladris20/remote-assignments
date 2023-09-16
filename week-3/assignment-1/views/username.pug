@@ -1,7 +1,14 @@
 extends layout
 
 block main
-	h1 Your name is #{username}, right?
-	form(action='/', method='get')
-		button(type='submit') Go home and submit number!
-	//- img(src='https://media.tenor.com/t_CG6WvtFVYAAAAC/mina-pout.gif' alt='Mina cry' title="Mina from TWICE")
+	if username === ''
+		form(action=`/trackName?name=${username}` method=post)
+			label
+				| Please insert your name: 
+				input(style='margin-left: 10px' type='text' name='username')
+				button(style='margin-left: 2px' type='submit') Submit
+	else
+		h1 Your name is #{username}, right?
+		form(action='/', method='get')
+			button(type='submit') Go home and submit number!
+			//- img(src='https://media.tenor.com/t_CG6WvtFVYAAAAC/mina-pout.gif' alt='Mina cry' title="Mina from TWICE")
