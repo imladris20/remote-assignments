@@ -1,10 +1,11 @@
 extends layout.pug 
 
 block main
-    //- img(src='https://media.tenor.com/t_CG6WvtFVYAAAAC/mina-pout.gif' alt='Mina cry')
     if !sum || sum<=0
         h1 Wrong Parameter! Please enter positive integer.
+        img(src='https://media.tenor.com/t_CG6WvtFVYAAAAC/mina-pout.gif' alt='Mina cry')
     else 
         h1 Everything works fine.
         p #{countingDescription}
         h2 Add from 1 to #{number} is #{sum}.
+        img(src ="https://steamuserimages-a.akamaihd.net/ugc/960842269454407384/FBB56B56A8E9D71DB1E06E371F0F8DB8F6E4D66B/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Mina")
