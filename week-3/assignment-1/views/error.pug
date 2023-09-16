@@ -1,0 +1,8 @@
+extends layout
+
+block main
+	h1 Oops! Something went wrong!
+	h1= `${error.message} - Status: ${error.status}`
+	a(href='/') Click to Go Home
+	pre= error.stack
+	//- img(src='https://media.tenor.com/t_CG6WvtFVYAAAAC/mina-pout.gif' alt='Mina cry' title="Mina from TWICE")
