@@ -1,5 +1,10 @@
 extends layout.pug 
 
 block main
-    h1 Lack of Parameter
-    img(src='https://media.tenor.com/t_CG6WvtFVYAAAAC/mina-pout.gif' alt='Mina cry')
+    //- img(src='https://media.tenor.com/t_CG6WvtFVYAAAAC/mina-pout.gif' alt='Mina cry')
+    if !sum || sum<=0
+        h1 Wrong Parameter! Please enter positive integer.
+    else 
+        h1 Everything works fine.
+        p #{countingDescription}
+        h2 Add from 1 to #{number} is #{sum}.
