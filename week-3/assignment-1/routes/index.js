@@ -2,35 +2,44 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('index.pug');
+    res.redirect('/sum.html');
 })
 
 router.get('/getData', (req,res) => {
     const query = req.query;
     let number = query.number;
-    
-    if(isNaN(number)){
-        number = '';
-    } else {
-        number = parseInt(number);
-    }
-    console.log(`The type of number is ${typeof number} and its value is ${number}.`)
-
+    let status = 'Lack of Parameter';
     let sum = 0;
     let countingDescription = '';
-    for(i=1; i<=number ; i++){
-        sum += i;
-        if (i<number){
-            countingDescription += `${i} + `;
-        } else {
-            countingDescription += `${i} = ${sum}`;
+
+    console.log('Input: ', number);
+
+    if(!number) {
+        status = 'Lack of Parameter';
+        console.log(status);
+    } else if (isNaN(number) || parseInt(number)<=0 ) {
+        status = 'Wrong Parameter! Please enter positive integer.'
+        console.log(status);
+    } else {
+        number = parseInt(number);
+        for(let i=1; i<=number ; i++){
+            sum += i;
+            if (i<number){
+                countingDescription += `${i} + `;
+            } else {
+                countingDescription += `${i} = ${sum}`;
+            }
         }
+        status = 'Well done!';
+        console.log(`${status} The summation is ${sum}.`);
     }
 
-    console.log("Sum is: ", sum);
-    console.log("Result is: ", countingDescription);
+    res.render('getData.pug', {query, sum, countingDescription, number, status});
+})
 
-    res.render('getData.pug', {query, sum, countingDescription, number});
+router.post('/sum.html', (req, res) => {
+    res.cookie('numberInsert', req.body.targetnumber);
+    res.redirect(`/getData?number=${req.body.targetnumber}`);
 })
 
 module.exports = router;
