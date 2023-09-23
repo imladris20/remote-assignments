@@ -18,8 +18,7 @@ render(data);
 
 
 function ajax(url) {
-  return fetch(url)
-    .then( response => response.json())
+  return fetch(url).then( response => response.json())
 }
 
 function render(data) {
