@@ -28,7 +28,7 @@ const Header = () => {
               <li><NavLink to="/" style={{ display: 'block' }}>讀者投稿</NavLink></li>
             </ul>
             <Link className="close-logo" href="#" style={{ display: 'block' }} onClick={actions.changeFloatNav} >
-              <img className="close" alt="close" src="/close.png" style={{ display: 'block' }}/>
+              <img className="close" alt="close" src="./close.png" style={{ display: 'block' }}/>
             </Link>
           </>
         : <>
@@ -39,17 +39,17 @@ const Header = () => {
               <li><NavLink to="/" style={{ display: 'none' }}>讀者投稿</NavLink></li>
             </ul>
             <Link className="close-logo" href="#" style={{ display: 'none' }} onClick={actions.changeFloatNav}>
-              <img className="close" alt="close" src="/close.png" style={{ display: 'none' }} />
+              <img className="close" alt="close" src="./close.png" style={{ display: 'none' }} />
             </Link>
           </>
       }
 
       {isOriginNavShowed
         ? <Link className="main-logo h-items" onClick={actions.changeOriginNav} to="#">
-            <img className="menu" alt="menu" src="/menu.png" />
+            <img className="menu" alt="menu" src="./menu.png" />
           </Link>
         : <Link className="main-logo h-items" onClick={actions.changeOriginNav} to="#" style={{ display: 'none' }}>
-            <img className="menu" alt="menu" src="/menu.png" />
+            <img className="menu" alt="menu" src="./menu.png" />
           </Link>
       }
     </header>

@@ -25,14 +25,14 @@ const IssueContainer = () => {
         {
           isShowMore
           ?
-            <Link className="button click-hide-a" to="#new-content" onClick={actions.changeShowMore}>
+            <Link className="button click-hide-a" to="/" onClick={actions.changeShowMore}>
               收起議題
-              <img className="arrow" alt="arrow" src="/up-arrow.png" />
+              <img className="arrow" alt="arrow" src="./up-arrow.png" />
             </Link>
           :
-            <Link className="button click-hide-a" to="#new-content" onClick={actions.changeShowMore}>
+            <Link className="button click-hide-a" to="/" onClick={actions.changeShowMore}>
               看更多議題
-              <img className="arrow" alt="arrow" src="/right-arrow.png" />
+              <img className="arrow" alt="arrow" src="./right-arrow.png" />
             </Link>
         }
       </div>
