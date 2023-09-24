@@ -20,17 +20,35 @@ export const DataProvider = (props) => {
   // }
 
   const [isChanged, setChanging] = useState(false);
+  const [isOriginNavShowed, setOrigin] = useState(true);
+  const [isFloatNavShowed, setFloat] = useState(false);
+
 
   const changeBanner = () => {
     setChanging(!isChanged)
   }
 
+  const changeOriginNav = () => {
+    setOrigin(!isOriginNavShowed)
+    setFloat(!isFloatNavShowed)
+  }
+
+  const changeFloatNav = () => {
+    setFloat(!isFloatNavShowed)
+    setOrigin(!isOriginNavShowed)
+  }
+
+
   return (
     <DataContext.Provider value={{
       issues: Issues,
       isChanged,
+      isOriginNavShowed,
+      isFloatNavShowed,
       actions: {
-        changeBanner
+        changeBanner,
+        changeOriginNav,
+        changeFloatNav
       }
     }}>
       {props.children}
