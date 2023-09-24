@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="top-header">
-      <h1 className="main-title h-items"><a href="#">Caring Taiwan</a></h1>
+      <h1 className="main-title h-items"><Link to="/">Caring Taiwan</Link></h1>
       <nav className="main-nav h-items">
         <ul className="main-nav-ul h-items">
           <li><NavLink to="/">關於我們</NavLink></li>
