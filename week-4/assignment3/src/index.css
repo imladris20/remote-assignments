@@ -7,7 +7,7 @@ body {
 	line-height: 1.6;
 	color: #3A3A3A;
 	margin: 0;
-	background: url("../img/background.jpg") top center / cover grey;
+	background: url("/background.jpg") top center / cover grey;
 	background-blend-mode: darken;
 	display: flex;
   	flex-direction: column;
@@ -65,6 +65,19 @@ span {
 
 .h-items {
 	flex: 1;
+}
+
+.main-content {
+  padding: 1em 2em;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.icon-error {
+  font-size: 3.2em;
+  margin-bottom: .25em;
 }
 
 .main-title {
