@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://imladris20.github.io/remote-assignments/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
