@@ -61,10 +61,11 @@ float[0].addEventListener('click', () => {
 
 const btnMoreContent = document.querySelector('.more-content');
 const btnClickHide = document.querySelector('.click-hide-a');
+
 const allContent = document.querySelectorAll('.content');
-const hide = document.querySelectorAll('.hide');
 const hideContent = document.querySelectorAll('.hide-content')
 const btnContent = document.querySelectorAll('.content .button');
+const hide = document.querySelectorAll('.hide');
 let isClicked = false;
 
 btnMoreContent.addEventListener('click', () => {
