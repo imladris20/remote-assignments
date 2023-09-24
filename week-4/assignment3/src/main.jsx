@@ -8,7 +8,7 @@ import { DataProvider } from './context/DataContext.jsx'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter basename="/aws_week4_assignment3">
+    <HashRouter basename="/remote-assignments/week-4/assignment3">
       <DataProvider>
         <App />
       </DataProvider>
