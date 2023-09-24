@@ -11,6 +11,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "homepage": "https://imladris20.github.io/remote-assignments/week-4/assignment3",
   "dependencies": {
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
