@@ -1,6 +1,6 @@
 import {createContext} from "react";
 import { Issues } from '../assets/issues'
-// import {useState} from "react";
+import { useState } from "react";
 
 const DataContext = createContext(null);
 
@@ -19,9 +19,19 @@ export const DataProvider = (props) => {
   //   setUser(null);
   // }
 
+  const [isChanged, setChanging] = useState(false);
+
+  const changeBanner = () => {
+    setChanging(!isChanged)
+  }
+
   return (
     <DataContext.Provider value={{
-      issues: Issues
+      issues: Issues,
+      isChanged,
+      actions: {
+        changeBanner
+      }
     }}>
       {props.children}
     </DataContext.Provider>
