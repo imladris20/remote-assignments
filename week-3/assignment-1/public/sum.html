@@ -5,25 +5,28 @@
     <head>
         <meta charset = "utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>  </title>
+        <title>Week-3 Assignment</title>
+        <link rel="shortcut icon" href="static/favicon.ico" />
+        <link rel="bookmark" href="static/favicon.ico" />
         <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     </head>
 
     <body>
         <h1>Summation of Arithmetic Series</h1>
         <h2>Give me a number and I will give you summation!</h2>
-        <form action="/sum.html" method="post">
-            <label> Please insert the number you want to add from one to: 
-                <input style="margin-left: 10px" type="text" name="targetnumber" id="targetnumber">
-            </label>
-            <button style="margin-left: 2px" type="submit">Submit</button>
-        </form>
+        <label> Please insert the number you want to add from one to: 
+            <input style="margin-left: 10px" type="text" name="targetnumber" id="targetnumber">
+        </label>
+        <button style="margin-left: 2px" type="submit" id="submitNumber">Submit</button>
+        <br>
         <br>
         <form action="/clear" method="post">
             <button style="margin-left: 2px" type="submit">I want to insert my name first!</button>
         </form>
+        <div id="result"></div>
+        <br>
         <img src="https://i.ytimg.com/vi/knkziLkj5go/sddefault.jpg" alt="Mina ask question" title="Mina from TWICE">
-        <!-- <script type="text/javascript" src="script.js"></script> -->
+        <script type="text/javascript" src="script.js"></script>
     </body>
 
 </html>

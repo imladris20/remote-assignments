@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.redirect('/sum.html');
+    res.render('index.pug');
 });
 
 router.get('/myName', (req,res) => {
@@ -38,10 +38,8 @@ router.get('/getData', (req,res) => {
 
     if(!number) {
         status = 'Lack of Parameter';
-        console.log(status);
     } else if (isNaN(number) || parseInt(number)<=0 ) {
         status = 'Wrong Parameter! Please enter positive integer.'
-        console.log(status);
     } else {
         number = parseInt(number);
         for(let i=1; i<=number ; i++){
@@ -51,17 +49,17 @@ router.get('/getData', (req,res) => {
             } else {
                 countingDescription += `${i} = ${sum}`;
             }
-        }
-        status = 'Well done!';
-        console.log(`${status} The summation is ${sum}.`);
+        };
+        status = 'Well Done!'
     }
 
-    res.render('getData.pug', {query, sum, countingDescription, number, status});
-})
+    const result = {
+        status,
+        sum,
+        countingDescription,
+    }
 
-router.post('/sum.html', (req, res) => {
-    res.cookie('numberInsert', req.body.targetnumber);
-    res.redirect(`/getData?number=${req.body.targetnumber}`);
+    res.json(result)
 })
 
 router.post('/trackName', (req, res) => {
