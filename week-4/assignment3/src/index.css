@@ -194,12 +194,12 @@ h3 {
 	align-items: center;
 }
 
-.main-nav-float-ul,
+/* .main-nav-float-ul,
 .main-nav-float-ul a,
 .close-logo,
 .close-logo img {
 	display: none;
-}
+} */
 
 .main-nav-float-ul {
 	min-height: 100vh;
@@ -264,14 +264,9 @@ h3 {
 	transform: translateX(5px);
 }
 
-.flex {
-	display: flex;
-}
-
 .block {
 	display: block;
 }
-
 /* ================================= 
   Media Queries
 ==================================== */

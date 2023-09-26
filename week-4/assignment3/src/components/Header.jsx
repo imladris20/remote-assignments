@@ -19,39 +19,19 @@ const Header = () => {
         </ul>
       </nav>
 
-      {isFloatNavShowed
-        ? <>
-            <ul className="main-nav-float-ul" style={{ display: 'block' }}>
-              <li><NavLink to="/" style={{ display: 'block' }}>關於我們</NavLink></li>
-              <li><NavLink to="/" style={{ display: 'block' }}>議題列表</NavLink></li>
-              <li><NavLink to="/" style={{ display: 'block' }}>捐款支持</NavLink></li>
-              <li><NavLink to="/" style={{ display: 'block' }}>讀者投稿</NavLink></li>
-            </ul>
-            <Link className="close-logo" href="#" style={{ display: 'block' }} onClick={actions.changeFloatNav} >
-              <img className="close" alt="close" src="/remote-assignments/close.png" style={{ display: 'block' }}/>
-            </Link>
-          </>
-        : <>
-            <ul className="main-nav-float-ul" style={{ display: 'none' }}>
-              <li><NavLink to="/" style={{ display: 'none' }}>關於我們</NavLink></li>
-              <li><NavLink to="/" style={{ display: 'none' }}>議題列表</NavLink></li>
-              <li><NavLink to="/" style={{ display: 'none' }}>捐款支持</NavLink></li>
-              <li><NavLink to="/" style={{ display: 'none' }}>讀者投稿</NavLink></li>
-            </ul>
-            <Link className="close-logo" href="#" style={{ display: 'none' }} onClick={actions.changeFloatNav}>
-              <img className="close" alt="close" src="/remote-assignments/close.png" style={{ display: 'none' }} />
-            </Link>
-          </>
-      }
+      <ul className={isFloatNavShowed? "main-nav-float-ul block" : "hide"}>
+        <li><NavLink to="/" className={isFloatNavShowed? "block" : "hide"}>關於我們</NavLink></li>
+        <li><NavLink to="/" className={isFloatNavShowed? "block" : "hide"}>議題列表</NavLink></li>
+        <li><NavLink to="/" className={isFloatNavShowed? "block" : "hide"}>捐款支持</NavLink></li>
+        <li><NavLink to="/" className={isFloatNavShowed? "block" : "hide"}>讀者投稿</NavLink></li>
+      </ul>
+      <Link className={isFloatNavShowed? "close-logo block" : "hide"} to="/" onClick={actions.changeFloatNav} >
+        <img className={isFloatNavShowed? "close block" : "hide"} alt="close" src="/remote-assignments/close.png" />
+      </Link>
 
-      {isOriginNavShowed
-        ? <Link className="main-logo h-items" onClick={actions.changeOriginNav} to="#">
-            <img className="menu" alt="menu" src="/remote-assignments/menu.png" />
-          </Link>
-        : <Link className="main-logo h-items" onClick={actions.changeOriginNav} to="#" style={{ display: 'none' }}>
-            <img className="menu" alt="menu" src="/remote-assignments/menu.png" />
-          </Link>
-      }
+      <Link className={isOriginNavShowed ? "main-logo h-items" : "hide"} onClick={actions.changeOriginNav} to="/">
+        <img className="menu" alt="menu" src="/remote-assignments/menu.png" />
+      </Link>
     </header>
   );
 }
