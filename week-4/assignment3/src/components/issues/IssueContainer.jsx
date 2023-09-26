@@ -22,19 +22,10 @@ const IssueContainer = () => {
     <div className="row">
       {issueArray}
       <div className='more-content click-hide'>
-        {
-          isShowMore
-          ?
-            <Link className="button click-hide-a" to="/" onClick={actions.changeShowMore}>
-              收起議題
-              <img className="arrow" alt="arrow" src="/remote-assignments/up-arrow.png" />
-            </Link>
-          :
-            <Link className="button click-hide-a" to="/" onClick={actions.changeShowMore}>
-              看更多議題
-              <img className="arrow" alt="arrow" src="/remote-assignments/right-arrow.png" />
-            </Link>
-        }
+        <Link className="button click-hide-a" to="/" onClick={actions.changeShowMore}>
+          { isShowMore? '收起議題' : '看更多議題' }
+          <img className="arrow" alt="arrow" src="/remote-assignments/right-arrow.png" />
+        </Link>
       </div>
     </div>
   )
