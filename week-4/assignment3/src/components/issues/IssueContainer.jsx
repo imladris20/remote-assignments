@@ -21,7 +21,7 @@ const IssueContainer = () => {
   return (
     <div className="row">
       {issueArray}
-      <div className='more-content click-hide'>
+      <div className='more-content-btn click-hide'>
         <Link className="button click-hide-a" to="/" onClick={actions.changeShowMore}>
           { isShowMore? '收起議題' : '看更多議題' }
           <img className="arrow" alt="arrow" src="/remote-assignments/right-arrow.png" />
